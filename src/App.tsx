@@ -11,7 +11,7 @@ function App() {
       }}
     >
       <p>Current Version:</p>
-      <p style={{ marginLeft: 10, fontWeight: "bold" }}>20</p>
+      <p style={{ marginLeft: 10, fontWeight: "bold" }}>21</p>
     </div>
   );
 }
