@@ -29,8 +29,8 @@ export default defineConfig({
 
       workbox: {
         // activate the new SW immediately, no waiting
-        clientsClaim: false,
-        skipWaiting: false,
+        clientsClaim: true,
+        skipWaiting: true,
         cleanupOutdatedCaches: true,
 
         // precache only the app shell (static build output)
