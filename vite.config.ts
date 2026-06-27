@@ -29,7 +29,7 @@ export default defineConfig({
 
       workbox: {
         // activate the new SW immediately, no waiting
-        clientsClaim: true,
+        clientsClaim: false,
         skipWaiting: true,
         cleanupOutdatedCaches: true,
 
