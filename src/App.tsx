@@ -24,7 +24,7 @@ function App() {
 
         <div style={{ display: "flex", marginTop: 20 }}>
           <p>Current Version:</p>
-          <p style={{ marginLeft: 10, fontWeight: "bold" }}>32</p>
+          <p style={{ marginLeft: 10, fontWeight: "bold" }}>33</p>
         </div>
       </div>
     </BrowserRouter>
