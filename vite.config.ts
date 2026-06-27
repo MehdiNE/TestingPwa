@@ -7,7 +7,7 @@ export default defineConfig({
   plugins: [
     react(),
     VitePWA({
-      registerType: "prompt",
+      registerType: "autoUpdate",
       injectRegister: "auto",
 
       pwaAssets: {
@@ -29,7 +29,7 @@ export default defineConfig({
 
       workbox: {
         // activate the new SW immediately, no waiting
-        clientsClaim: false,
+        clientsClaim: true,
         skipWaiting: true,
         cleanupOutdatedCaches: true,
 
