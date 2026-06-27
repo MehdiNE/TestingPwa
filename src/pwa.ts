@@ -3,6 +3,9 @@ import { registerSW } from "virtual:pwa-register";
 const intervalMS = 1 * 60 * 1000;
 
 export const updateSW = registerSW({
+  onNeedRefresh() {
+    console.log("need refresh!!!!");
+  },
   onRegisteredSW(swUrl, r) {
     if (!r) return;
 
@@ -11,7 +14,7 @@ export const updateSW = registerSW({
 
       if ("connection" in navigator && !navigator.onLine) return;
 
-      const resp = await fetch(swUrl, {
+      await fetch(swUrl, {
         cache: "no-store",
         headers: {
           cache: "no-store",
@@ -19,10 +22,12 @@ export const updateSW = registerSW({
         },
       });
 
-      if (resp?.status === 200) await r.update();
+      //   if (resp?.status === 200) await r.update();
     }, intervalMS);
   },
 });
+
+registerSW({ immediate: true });
 
 // import { registerSW } from "virtual:pwa-register";
 
